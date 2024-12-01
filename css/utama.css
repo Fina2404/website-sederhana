@@ -1,0 +1,369 @@
+
+/* General Reset */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+list-style: none;
+font-family: "Arial", sans-serif;
+}
+
+body {
+background-color: #121212;
+color: black;
+font-family: 'Arial', sans-serif;
+line-height: 1.6;   
+margin: 0;
+padding: 0;
+}
+
+h2 {
+text-align: center;
+color: #000000;
+}
+
+.kata-kata {
+text-align: center;
+color: white;
+}
+
+/* Header */
+.header {
+background-color: black;
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 5%;
+}
+
+/* .logo {
+font-size: 1.5rem;
+font-weight: bold;
+cursor: pointer;
+}
+
+.logo span {
+color: ;
+} */
+
+.logo {
+font-size: 2rem;
+color: white;
+font-weight: 800;
+cursor: pointer;
+transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+transform: scale(1.1);
+}
+
+span {
+color: #b6895b;
+}
+
+.navbar {
+display: flex;
+gap: 15px;
+}
+
+.navbar a {
+color: white;
+text-decoration: none;
+padding: 5px 10px;
+border-radius: 5px;
+transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+background-color: #b6895b;
+}
+
+/* Main Content */
+.container {
+max-width: 1200px;
+margin: 20px auto;
+padding: 20px;
+background: #eaeaea;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+}
+
+/* Table */
+.table-container {
+overflow-x: auto;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 20px;
+}
+
+table th, table td {
+padding: 10px;
+text-align: left;
+border: 1px solid #000000;
+}
+
+table th {
+background-color: #b6895b;
+color: #121212;
+}
+
+table tr:nth-child(odd) {
+background-color: #f8f9fa;
+}
+
+table tr:nth-child(even) {
+background-color: #e9ecef;
+}
+
+/* Buttons */
+button {
+padding: 8px 12px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 0.9rem;
+margin: 5px 0;
+}
+
+.btn-edit {
+background-color: #28a745; /* Hijau untuk "Edit" */
+color: white;
+padding: 8px 12px; /* Sama seperti .btn-delete */
+border: none;
+border-radius: 4px; /* Sama seperti .btn-delete */
+cursor: pointer;
+font-size: 0.9rem;
+display: inline-block;
+text-align: center;
+}
+
+.btn-edit:hover {
+background-color: #218838; /* Warna hijau lebih gelap saat hover */
+}
+
+
+.btn-edit {
+background-color: #28a745;
+color: white;
+}
+
+.btn-edit:hover {
+background-color: #218838;
+}
+
+.btn-delete {
+background-color: #dc3545;
+color: white;
+}
+
+.btn-delete:hover {
+background-color: #c82333;
+}
+
+/* Form */
+.search-form {
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+gap: 10px;
+}
+
+.search-form input {
+padding: 8px;
+border: 1px solid #ced4da;
+border-radius: 4px;
+width: 250px;
+}
+
+.search-form button {
+padding: 8px 12px;
+background-color: #b6895b;
+color: white;
+border-radius: 4px;
+}
+
+.search-form button:hover {
+background-color: #138496;
+}
+
+/* Pagination */
+.pagination {
+display: flex;
+justify-content: center;
+gap: 5px;
+}
+
+.pagination a {
+padding: 8px 12px;
+border: 1px solid #b6895b;
+color: #b6895b;
+border-radius: 4px;
+text-decoration: none;
+transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a.active {
+background-color: #b6895b;
+color: white;
+}
+
+.pagination a:hover {
+background-color: #138496;
+color: white;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+.header {
+flex-direction: column;
+text-align: center;
+}
+
+.navbar {
+flex-direction: column;
+gap: 10px;
+}
+
+.container {
+padding: 15px;
+}
+
+.search-form {
+flex-direction: column;
+gap: 5px;
+}
+
+table th, table td {
+font-size: 0.9rem;
+}
+
+.pagination a {
+padding: 6px 8px;
+}
+}
+
+@media (max-width: 480px) {
+.logo {
+font-size: 1.2rem;
+}
+
+.search-form input {
+width: 100%;
+}
+
+table th, table td {
+font-size: 0.8rem;
+padding: 6px;
+}
+
+.pagination a {
+font-size: 0.8rem;
+}
+}
+
+
+    /* Modal Konfirmasi */
+.modal {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+justify-content: center;
+align-items: center;
+z-index: 1000;
+animation: fadeIn 0.3s;
+}
+
+.modal-content {
+background-color: #ffffff;
+padding: 20px;
+border-radius: 12px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+text-align: center;
+width: 320px;
+animation: slideIn 0.3s;
+}
+
+.modal p {
+font-size: 18px;
+color: #333333;
+margin-bottom: 20px;
+}
+
+.modal-buttons {
+display: flex;
+justify-content: space-between;
+gap: 15px;
+}
+
+.btn-confirm,
+.btn-cancel {
+padding: 10px 20px;
+font-size: 14px; 
+border-radius: 8px;
+cursor: pointer;
+border: none;
+transition: 0.3s;
+}
+
+.btn-confirm {
+background-color: #d9534f;
+color: white;
+}
+
+.btn-cancel {
+background-color: #5bc0de;
+color: white;
+}
+
+.btn-confirm:hover {
+background-color: #c9302c;
+}
+
+.btn-cancel:hover {
+background-color: #46b8da;
+}
+
+/* Pop-Up Sukses */
+/* Pop-Up Sukses */
+.popup-success {
+display: none;
+position: fixed;
+top: 10%; /* Letakkan di bagian atas tengah */
+left: 50%; /* Letakkan di tengah secara horizontal */
+transform: translate(-50%, -50%); /* Pastikan berada di tengah secara sempurna */
+background-color: #5cb85c;
+color: white;
+padding: 15px 25px;
+border-radius: 8px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+z-index: 1000;
+animation: fadeInOut 3s;
+font-size: 16px;
+text-align: center;
+}
+
+/* Animasi */
+@keyframes fadeInOut {
+0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+}
+10%, 90% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+100% {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+}
+}
